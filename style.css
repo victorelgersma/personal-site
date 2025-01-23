@@ -46,6 +46,8 @@ body {
   max-width: 450px;
   min-width: 325px;
   padding-top: 1rem;
+  padding-right: 0.4rem;
+  padding-left: 0.4rem;
 }
 
 p > a {
