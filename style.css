@@ -1,0 +1,89 @@
+/* reset */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  outline: 2px solid green;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:root {
+  --link-color: #bf1a2f;
+  font-size: 20px;
+}
+.avatar-image {
+  border-radius: 50%;
+  border: 4px solid white;
+  background: #fff;
+}
+.border {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid black;
+}
+
+.bio-card {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  min-width: 325px;
+  padding: 0.5rem;
+}
+
+p > a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+h1 {
+  margin: 1rem 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f0f0f0;
+}
+
+.social a {
+  margin: 0.2rem;
+}
+.social svg {
+  width: 24px;
+  height: 24px;
+}
+.social {
+  margin: 1rem;
+}
+
+.social img {
+  width: 25px;
+}
+
+.social a:hover {
+  opacity: 50%;
+  text-decoration: none;
+}
