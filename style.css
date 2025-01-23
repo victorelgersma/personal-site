@@ -16,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   color: var(--main-text-color);
+  border: 2px solid red;
 }
 :root {
   --link-color: #1abf6c;
@@ -45,7 +46,8 @@ body {
   align-items: center;
   max-width: 450px;
   min-width: 325px;
-  padding: 0.5rem;
+  padding: 1rem;
+  outline: 2px solid green;
 }
 
 p > a {
