@@ -93,9 +93,3 @@ body {
   opacity: 50%;
   text-decoration: none;
 }
-
-@media (max-width: 375px) {
-  .bio-card p {
-    text-align: left;
-  }
-}
