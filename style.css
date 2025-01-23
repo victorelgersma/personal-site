@@ -18,7 +18,7 @@ body {
   color: var(--main-text-color);
 }
 :root {
-  --link-color: #bf1a2f;
+  --link-color: #1abf6c;
   --main-text-color: #555555;
   --dark-text-color: #111;
   font-size: 20px;
