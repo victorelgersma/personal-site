@@ -44,7 +44,7 @@ body {
   align-items: center;
   max-width: 450px;
   min-width: 325px;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
 p > a {
