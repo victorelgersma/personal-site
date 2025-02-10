@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="global.css" />
   </head>
   <body>
-    <section class="event">
+    <article class="event">
       <div class="illustration">
         <iframe
           width="420"
@@ -20,18 +20,18 @@
         <div class="text-wrapper">
           <h3>June 2016</h3>
           <p>
-            I wrote and edited a video on deforestation and population growth.
+            I wrote and edited a video essay on deforestation and population growth.
             It came 2nd in the
             <a
               href="https://populationeducation.org/resource/world-of-7-billion-website/"
               >World of 7 Billion
             </a>
-            video contest, winning a prize of 500$
+            video contest, winning a cash prize of 500$
           </p>
         </div>
       </div>
-    </section>
-    <section class="event">
+    </article>
+    <article class="event">
       <div class="description">
         <div class="text-wrapper">
           <h3>June 2016</h3>
@@ -54,12 +54,14 @@
         >
         </iframe>
       </div>
-    </section>
+    </article>
   </body>
 
   <style>
     body {
       margin: 0;
+      line-height: 1.7em;
+      font-weight: 400;
     }
 
     .text-wrapper {
@@ -67,7 +69,7 @@
       min-width: 200px;
     }
 
-    section {
+    article {
       background-color: var(--lavender-blush);
       width: 100%;
       padding: 2rem;
@@ -75,13 +77,19 @@
       justify-content: space-around;
     }
 
+    /* prevent iframe from overflowing */
+    iframe {
+      max-width: 100%;
+      display: block;
+    }
+
     @media (max-width: 768px) {
       /* Adjust breakpoint as needed */
-      section {
+      article {
         display: flex;
         flex-direction: column;
       }
-      
+
       .illustration {
         order: 2;
         display: grid;
@@ -97,7 +105,7 @@
       padding-bottom: 1em;
     }
 
-    section .description {
+    article .description {
       padding: 1em;
       display: flex;
       justify-content: center;
@@ -105,11 +113,11 @@
     }
 
     .event:nth-child(odd) {
-      background-color: #f0f0f0;
+      background-color: rgb(241,242,246)
     }
 
     .event:nth-child(even) {
-      background-color: hsl(25, 25, 25);
+      background-color: #fff;
     }
   </style>
 </html>
