@@ -1,17 +1,10 @@
 ---
-
-
-
-import { formatDistanceToNow, parseISO } from 'date-fns';
-
-
+import { formatDistanceToNow, parseISO } from "date-fns";
 
 export function formatDateDifference(dateString) {
   const date = parseISO(dateString);
-  return (formatDistanceToNow(date, { addSuffix: true }));
+  return formatDistanceToNow(date, { addSuffix: true });
 }
-
-
 ---
 
 <html lang="en">
@@ -23,141 +16,169 @@ export function formatDateDifference(dateString) {
   </head>
   <body>
     <article class="event">
-      <div class="description">
+      <section class="description">
         <div class="text-wrapper">
-          <h3><time datetime="2016-07">{formatDateDifference("2019-07")}</time></h3>
+          <h3>
+            <time datetime="2019">{formatDateDifference("2019-07")}</time>
+          </h3>
           <p>
-            I wrote and edited a video essay on deforestation and population
-            growth. It came 2nd in the
-            <a
-              href="https://populationeducation.org/resource/world-of-7-billion-website/"
-              >World of 7 Billion
-            </a>
-            video contest, winning a cash prize of 500$
+            Won an award from the American Psychological Association for a short
+            film about behavioral economics. The video was made in collaboration
+            with Lachlan Peel. It is essentially a popularization of Daniel
+            Kahneman's research on 'the endowment effect' (we value things more
+            when they belong to us).
           </p>
         </div>
-      </div>
-      <div class="illustration">
-        <iframe
-          width="420"
-          height="315"
-          src="https://www.youtube.com/embed/gJbzGhb-hzk"
-        >
-        </iframe>
-      </div>
+        <section class="illustration">
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/embed/O3OZH1VJQiI"
+          >
+          </iframe>
+        </section>
+      </section>
+      <article class="event">
+        <section class="description">
+          <div class="text-wrapper">
+            <h3>
+              <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+            </h3>
+            <p>
+              I wrote and edited a video essay on deforestation and population
+              growth. It came 2nd in the
+              <a
+                href="https://populationeducation.org/resource/world-of-7-billion-website/"
+                >World of 7 Billion
+              </a>
+              video contest, winning a cash prize of 500$
+            </p>
+          </div>
+        </section>
+        <section class="illustration">
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/embed/gJbzGhb-hzk"
+          >
+          </iframe>
+        </section>
+      </article>
+
+      <article class="event">
+        <section class="description">
+          <div class="text-wrapper">
+            <h3>
+              <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+            </h3>
+            <p>
+              I wrote and edited a video essay about public health which came
+              3rd in the
+              <a
+                href="https://populationeducation.org/resource/world-of-7-billion-website/"
+                >World of 7 Billion
+              </a>
+              video contest, winning a prize of 250$.
+            </p>
+          </div>
+        </section>
+        <section class="illustration">
+          <iframe
+            width="420"
+            height="315"
+            src="https://www.youtube.com/embed/4MR7GopzJ2s"
+          >
+          </iframe>
+        </section>
+      </article>
     </article>
 
-    <article class="event">
-      <div class="description">
-        <div class="text-wrapper">
-          <h3><time datetime="2016-07">{formatDateDifference("2019-07")}</time></h3>
-          <p>
-            I wrote and edited a video essay about public health which
-            came 3rd in the
-            <a
-              href="https://populationeducation.org/resource/world-of-7-billion-website/"
-              >World of 7 Billion
-            </a>
-            video contest, winning a prize of 250$. 
-          </p>
-        </div>
-      </div>
-      <div class="illustration">
-        <iframe
-          width="420"
-          height="315"
-          src="https://www.youtube.com/embed/4MR7GopzJ2s"
-        >
-        </iframe>
-      </div>
-    </article>
-  </body>
-
-  <style>
-    body {
-      margin: 0;
-      line-height: 1.7em;
-      font-weight: 400;
-    }
-
-    .text-wrapper {
-      max-width: 400px;
-      min-width: 200px;
-    }
-
-    article {
-      background-color: var(--lavender-blush);
-      width: 100%;
-      padding: 2rem;
-      display: flex;
-      justify-content: space-around;
-    }
-
-    /* prevent iframe from overflowing */
-    iframe {
-      max-width: 100%;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      /* Adjust breakpoint as needed */
-      article {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .illustration {
-        order: 2;
-        display: grid;
-        place-content: center;
-      }
-
-      .description {
-        order: 1;
+    <style>
+      body {
+        margin: 0;
+        line-height: 1.7em;
+        font-weight: 400;
       }
 
       .text-wrapper {
-        order: 1;
-      }
-    }
-
-    h3 {
-      padding-bottom: 1em;
-    }
-
-    article .description {
-      padding: 1em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .event:nth-child(odd) {
-      background-color: rgb(241, 242, 246);
-    }
-
-    .event:nth-child(even) {
-      background-color: #fff;
-    }
-
-    /* flow on the page independent of semantic order */
-    /* Apply ordering until a certain breakpoint */
-    @media (min-width: 768px) {
-      .event:nth-child(1) .illustration {
-        order: 0;
+        max-width: 400px;
+        min-width: 200px;
       }
 
-      .event:nth-child(1) .description {
-        order: 1;
+      article {
+        background-color: var(--lavender-blush);
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-around;
       }
-    }
 
-    /* Reset ordering for smaller screens */
-    @media (max-width: 767px) {
-      .event .illustration,
-      .event .description {
-        order: initial;
+      /* prevent iframe from overflowing */
+      iframe {
+        max-width: 100%;
+        display: block;
       }
-    }
-  </style>
+
+      @media (max-width: 768px) {
+        /* Adjust breakpoint as needed */
+        article {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .illustration {
+          order: 2;
+          display: grid;
+          place-content: center;
+        }
+
+        .description {
+          order: 1;
+        }
+
+        .text-wrapper {
+          order: 1;
+        }
+      }
+
+      h3 {
+        padding-bottom: 1em;
+      }
+
+      article .description {
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .event:nth-child(odd) {
+        background-color: rgb(241, 242, 246);
+      }
+
+      .event:nth-child(even) {
+        background-color: #fff;
+      }
+
+      /* flow on the page independent of semantic order */
+      /* Apply ordering until a certain breakpoint */
+      @media (min-width: 768px) {
+        .event:nth-child(1) .illustration {
+          order: 0;
+        }
+
+        .event:nth-child(1) .description {
+          order: 1;
+        }
+      }
+
+      /* Reset ordering for smaller screens */
+      @media (max-width: 767px) {
+        .event .illustration,
+        .event .description {
+          order: initial;
+        }
+      }
+    </style>
+  </body>
 </html>
