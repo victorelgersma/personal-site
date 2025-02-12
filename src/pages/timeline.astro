@@ -1,31 +1,42 @@
 ---
-
-
-
-import { formatDistanceToNow, parseISO } from 'date-fns';
-
-
+import { formatDistanceToNow, parseISO } from "date-fns";
 
 export function formatDateDifference(dateString) {
   const date = parseISO(dateString);
-  return (formatDistanceToNow(date, { addSuffix: true }));
+  return formatDistanceToNow(date, { addSuffix: true });
 }
-
-
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work Timeline</title>
-    <link rel="stylesheet" href="global.css" />
+    <title>Document</title>
+    <link href="global.css" rel="stylesheet" />
   </head>
   <body>
     <article class="event">
       <div class="description">
         <div class="text-wrapper">
-          <h3><time datetime="2016-07">{formatDateDifference("2019-07")}</time></h3>
+          <h3>
+            <time datetime="2024-11">{formatDateDifference("2024-11")}</time>
+          </h3>
+          <p>
+            Joined the Altitude squad at THG Ingenuity, where I get to improve
+            my core web skills by working on e-commerce storefronts such as
+            lookfantastic and myprotein.
+          </p>
+        </div>
+      </div>
+      <div class="illustration"></div>
+    </article>
+
+    <article class="illustrated-event">
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+          </h3>
           <p>
             I wrote and edited a video essay on deforestation and population
             growth. It came 2nd in the
@@ -47,18 +58,20 @@ export function formatDateDifference(dateString) {
       </div>
     </article>
 
-    <article class="event">
+    <article class="illustrated-event">
       <div class="description">
         <div class="text-wrapper">
-          <h3><time datetime="2016-07">{formatDateDifference("2019-07")}</time></h3>
+          <h3>
+            <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+          </h3>
           <p>
-            I wrote and edited a video essay about public health which
-            came 3rd in the
+            I wrote and edited a video essay about public health which came 3rd
+            in the
             <a
               href="https://populationeducation.org/resource/world-of-7-billion-website/"
               >World of 7 Billion
             </a>
-            video contest, winning a prize of 250$. 
+            video contest, winning a prize of 250$.
           </p>
         </div>
       </div>
@@ -80,17 +93,28 @@ export function formatDateDifference(dateString) {
       font-weight: 400;
     }
 
+    .no-description {
+      display: flex;
+      justify-content: flex-start;
+    }
+
     .text-wrapper {
-      max-width: 400px;
+      max-width: 600px;
       min-width: 200px;
     }
 
-    article {
-      background-color: var(--lavender-blush);
+    .event {
       width: 100%;
-      padding: 2rem;
+    }
+
+    article {
+      padding: 3em 4em;
+    }
+    .illustrated-event {
+      width: 100%;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      gap: 2em;
     }
 
     /* prevent iframe from overflowing */
@@ -99,25 +123,18 @@ export function formatDateDifference(dateString) {
       display: block;
     }
 
-    @media (max-width: 768px) {
-      /* Adjust breakpoint as needed */
-      article {
-        display: flex;
-        flex-direction: column;
+    @media (max-width: 1000px) {
+      .illustrated-event {
+        display: block;
       }
-
-      .illustration {
-        order: 2;
-        display: grid;
-        place-content: center;
+      .illustration iframe {
+        margin: auto;
       }
 
       .description {
-        order: 1;
-      }
-
-      .text-wrapper {
-        order: 1;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
       }
     }
 
@@ -125,39 +142,20 @@ export function formatDateDifference(dateString) {
       padding-bottom: 1em;
     }
 
-    article .description {
-      padding: 1em;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .event:nth-child(odd) {
+    .illustrated-event:nth-child(odd) {
       background-color: rgb(241, 242, 246);
     }
 
-    .event:nth-child(even) {
+    .illustrated-event:nth-child(even) {
       background-color: #fff;
     }
 
-    /* flow on the page independent of semantic order */
-    /* Apply ordering until a certain breakpoint */
-    @media (min-width: 768px) {
-      .event:nth-child(1) .illustration {
-        order: 0;
-      }
-
-      .event:nth-child(1) .description {
-        order: 1;
-      }
+    .illustrated-event:nth-child(odd) .illustration {
+      order: 0;
     }
 
-    /* Reset ordering for smaller screens */
-    @media (max-width: 767px) {
-      .event .illustration,
-      .event .description {
-        order: initial;
-      }
+    .illustrated-event:nth-child(odd) .description {
+      order: 1;
     }
   </style>
 </html>
