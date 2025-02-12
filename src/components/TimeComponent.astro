@@ -1,0 +1,13 @@
+---
+// filepath: /Users/victor.elgersma41/dev/personal/portfolio/src/components/TimeComponent.astro
+import { formatDistanceToNow, parseISO } from 'date-fns';
+
+export function formatDateDifference(dateString) {
+  const date = parseISO(dateString);
+  return formatDistanceToNow(date, { addSuffix: true });
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={date}>{formatDateDifference(date)}</time>
