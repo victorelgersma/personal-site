@@ -1,5 +1,6 @@
 ---
 import { formatDistanceToNow, parseISO } from "date-fns";
+import Layout from "../layouts/Layout.astro";
 
 export function formatDateDifference(dateString) {
   const date = parseISO(dateString);
@@ -7,172 +8,198 @@ export function formatDateDifference(dateString) {
 }
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="global.css" rel="stylesheet" />
-  </head>
-  <body>
-    <article class="event">
-      <div class="description">
-        <div class="text-wrapper">
-          <h3>
-            <time datetime="2024-11">{formatDateDifference("2024-11")}</time>
-          </h3>
-          <p>
-            Joined a new team at <a href="https://www.thgingenuity.com/"
-              >THG Ingenuity</a
-            >, where I encountered the <a href="https://astro.build/"
-              >AstroJS framework</a
-            > for the first time
-          </p>
-        </div>
+<Layout>
+  <section class="header">
+    <h1>My Timeline</h1>
+    <h2>Brief snippets from my career and day-to-day working life.</h2>
+  </section>
+
+  <article class="event">
+    <div class="description">
+      <div class="text-wrapper">
+        <h3>
+          <time datetime="2024-11">{formatDateDifference("2024-11")}</time>
+        </h3>
+        <p>
+          Joined a new team at <a href="https://www.thgingenuity.com/"
+            >THG Ingenuity</a
+          >, where I encountered the <a href="https://astro.build/"
+            >AstroJS framework</a
+          > for the first time
+        </p>
       </div>
-      <div class="illustration"></div>
-    </article>
+    </div>
+    <div class="illustration"></div>
+  </article>
 
-    <article class="event">
-      <div class="description">
-        <div class="text-wrapper">
-          <h3>
-            <time datetime="2024-07">{formatDateDifference("2024-07")}</time>
-          </h3>
-          <p>
-            Joined my first backend development team at THG Ingenuity.
-            Encountered <a href="https://nextjs.org/">NextJS</a> for the first time.
-          </p>
-        </div>
+  <article class="event">
+    <div class="description">
+      <div class="text-wrapper">
+        <h3>
+          <time datetime="2024-07">{formatDateDifference("2024-07")}</time>
+        </h3>
+        <p>
+          Joined my first backend development team at THG Ingenuity. Encountered <a
+            href="https://nextjs.org/">NextJS</a
+          > for the first time.
+        </p>
       </div>
-      <div class="illustration"></div>
-    </article>
+    </div>
+    <div class="illustration"></div>
+  </article>
 
-    <article class="illustrated-event">
-      <div class="description">
-        <div class="text-wrapper">
-          <h3>
-            <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
-          </h3>
-          <p>
-            I wrote and edited a video essay on deforestation and population
-            growth. It came 2nd in the
-            <a
-              href="https://populationeducation.org/resource/world-of-7-billion-website/"
-              >World of 7 Billion
-            </a>
-            video contest, winning a cash prize of 500$
-          </p>
-        </div>
+  <article class="illustrated event">
+    <div class="description">
+      <div class="text-wrapper">
+        <h3>
+          <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+        </h3>
+        <p>
+          I wrote and edited a video essay on deforestation and population
+          growth. It came 2nd in the
+          <a
+            href="https://populationeducation.org/resource/world-of-7-billion-website/"
+            >World of 7 Billion
+          </a>
+          video contest, winning a cash prize of 500$
+        </p>
       </div>
-      <div class="illustration">
-        <iframe
-          width="420"
-          height="315"
-          src="https://www.youtube.com/embed/gJbzGhb-hzk"
-        >
-        </iframe>
+    </div>
+    <div class="illustration">
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/gJbzGhb-hzk"
+      >
+      </iframe>
+    </div>
+  </article>
+
+  <article class="illustrated event">
+    <div class="description">
+      <div class="text-wrapper">
+        <h3>
+          <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
+        </h3>
+        <p>
+          I wrote and edited a video essay about public health which came 3rd in
+          the
+          <a
+            href="https://populationeducation.org/resource/world-of-7-billion-website/"
+            >World of 7 Billion
+          </a>
+          video contest, winning a prize of 250$.
+        </p>
       </div>
-    </article>
+    </div>
+    <div class="illustration">
+      <iframe
+        width="420"
+        height="315"
+        src="https://www.youtube.com/embed/4MR7GopzJ2s"
+      >
+      </iframe>
+    </div>
+  </article>
+</Layout>
+<style>
+  .header {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkblue;
+    color: white;
+  }
+  h1 {
+    font-weight: 200;
+  }
+  h2 {
+    text-align: left;
+    padding: 1em;
+    margin: 0;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  .wrapper {
+    max-width: 1000px;
+    border: 2px solid red;
+    margin: auto;
+  }
+  article {
+    padding: 2em 5em;
+  }
+  body {
+    margin: 0;
+    line-height: 1.7em;
+    font-weight: 400;
+  }
 
-    <article class="illustrated-event">
-      <div class="description">
-        <div class="text-wrapper">
-          <h3>
-            <time datetime="2016-07">{formatDateDifference("2019-07")}</time>
-          </h3>
-          <p>
-            I wrote and edited a video essay about public health which came 3rd
-            in the
-            <a
-              href="https://populationeducation.org/resource/world-of-7-billion-website/"
-              >World of 7 Billion
-            </a>
-            video contest, winning a prize of 250$.
-          </p>
-        </div>
-      </div>
-      <div class="illustration">
-        <iframe
-          width="420"
-          height="315"
-          src="https://www.youtube.com/embed/4MR7GopzJ2s"
-        >
-        </iframe>
-      </div>
-    </article>
-  </body>
+  .no-description {
+    display: flex;
+    justify-content: flex-start;
+  }
 
-  <style>
-    body {
-      margin: 0;
-      line-height: 1.7em;
-      font-weight: 400;
-    }
+  .text-wrapper {
+    max-width: 600px;
+    min-width: 200px;
+  }
 
-    .no-description {
-      display: flex;
-      justify-content: flex-start;
-    }
+  .illustrated {
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  /* prevent iframe from overflowing */
+  iframe {
+    max-width: 100%;
+    display: block;
+  }
 
-    .text-wrapper {
-      max-width: 600px;
-      min-width: 200px;
-    }
-
-    .event {
-      width: 100%;
-    }
-
+  @media (max-width: 1000px) {
     article {
-      padding: 3em 4em;
-    }
-    .illustrated-event {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      gap: 2em;
+      padding: 1em;
     }
 
-    /* prevent iframe from overflowing */
-    iframe {
-      max-width: 100%;
+    .illustrated {
       display: block;
     }
-
-    @media (max-width: 1000px) {
-      .illustrated-event {
-        display: block;
-      }
-      .illustration iframe {
-        margin: auto;
-      }
-
-      .description {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 1em;
-      }
+    .illustration iframe {
+      margin: auto;
     }
 
-    h3 {
+    .description {
+      display: flex;
+      justify-content: center;
       padding-bottom: 1em;
     }
+  }
 
-    .illustrated-event:nth-child(odd) {
-      background-color: rgb(241, 242, 246);
-    }
+  h3 {
+    padding-bottom: 1em;
+  }
 
-    .illustrated-event:nth-child(even) {
-      background-color: #fff;
-    }
+  .event:nth-child(odd) {
+    background-color: rgb(241, 242, 246);
+  }
 
-    .illustrated-event:nth-child(odd) .illustration {
-      order: 0;
-    }
+  .event:nth-child(even) {
+    background-color: #fff;
+  }
 
-    .illustrated-event:nth-child(odd) .description {
-      order: 1;
-    }
-  </style>
-</html>
+  .event:nth-child(odd) .illustration {
+    order: 0;
+  }
+
+  .event:nth-child(odd) .description {
+    order: 1;
+  }
+</style>
