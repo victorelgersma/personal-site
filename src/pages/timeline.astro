@@ -1,9 +1,7 @@
 ---
-import { formatDistanceToNow, parseISO } from "date-fns";
-import Layout from "../layouts/Layout.astro";
-import TimeComponent from "../components/TimeComponent.astro";
-
-
+import { formatDistanceToNow, parseISO } from 'date-fns'
+import Layout from '../layouts/Layout.astro'
+import TimeComponent from '../components/TimeComponent.astro'
 ---
 
 <Layout>
@@ -11,120 +9,126 @@ import TimeComponent from "../components/TimeComponent.astro";
     <h1>My Timeline</h1>
     <h2>Brief snippets from my career and day-to-day working life.</h2>
   </section>
+  <div class="events-wrapper">
+    <article>
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <TimeComponent date="2024-11" />
+          </h3>
+          <p>
+            I've moved to a new team, which is focused on developing e-commerce
+            storefronts using AstroJS. I am working a lot more with HTML, CSS,
+            and VanillaJS.
+          </p>
+        </div>
+      </div>
+      <div class="illustration"></div>
+    </article>
 
-  <article class="event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2024-11"></TimeComponent>
-        </h3>
-        <p>
-          Due to a corporate restructure at my company <a href="https://www.thgingenuity.com/">THG Ingenuity</a>, I've moved to a new team.  My focus is now on developing e-commerce storefronts such as  <a href="https://www.myprotein.com">MyProtein</a> and  <a href="https://www.myprotein.com">Lookfantastic</a> using the <a href="https://astro.build/">AstroJS framework</a>. I'm particularly excited about this change because it gives me greater scope to work with core web technologies like HTML, CSS, and Vanilla JavaScript, which I believe will strengthen my general programming abilities. To support this, I've started reading "Eloquent JavaScript" by Marijn Haverbeke to deepen my JavaScript knowledge, and doing the exercises.
-        </p>
+    <article>
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <TimeComponent date="2024-07" />
+          </h3>
+          <p>
+            Joined my first backend development team at <a href="#"
+              >THG Ingenuity.
+            </a> Encountered <a href="https://nextjs.org/">NextJS</a> for the first
+            time.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="illustration"></div>
-  </article>
+      <div class="illustration"></div>
+    </article>
 
-  <article class="event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2024-07"></TimeComponent>
-        </h3>
-        <p>
-          Joined my first backend development team at <a href='#'>THG Ingenuity. </a> Encountered <a
-            href="https://nextjs.org/">NextJS</a
-          > for the first time.
-        </p>
+    <article class="illustrated">
+      <div class="container">
+        <div class="description">
+          <div class="text-wrapper">
+            <h3>
+              <TimeComponent date="2023-09" />
+            </h3>
+            <p>
+              I relocated to Manchester to start the <a
+                href="https://www.thg.com/talent/thg-accelerator/the-programme"
+                >THG Technology & Innovation Accelerator programme</a
+              > at THG Ingenuity.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="illustration"></div>
-  </article>
+      <div class="illustration"></div>
+    </article>
+    <article>
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <TimeComponent date="2023-01" />
+          </h3>
+          <p>
+            Joined the Institute of Art and Ideas as a Media Production Intern
+            (video editor)
+          </p>
+        </div>
+      </div>
+      <div class="illustration"></div>
+    </article>
+    <article class="illustrated">
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <TimeComponent date="2016-07" />
+          </h3>
+          <p>
+            I wrote and edited a video essay on deforestation and population
+            growth. It came 2nd in the
+            <a
+              href="https://populationeducation.org/resource/world-of-7-billion-website/"
+              >World of 7 Billion
+            </a>
+            video contest, winning a cash prize of 500$
+          </p>
+        </div>
+      </div>
+      <div class="illustration">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/gJbzGhb-hzk"
+        >
+        </iframe>
+      </div>
+    </article>
 
-  <article class="illustrated event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2023-09" />
-        </h3>
-        <p>
-          I relocated to Manchester to start the <a href="https://www.thg.com/talent/thg-accelerator/the-programme">THG Technology & Innovation Accelerator programme</a> at THG Ingenuity. 
-        </p>
+    <article class="illustrated">
+      <div class="description">
+        <div class="text-wrapper">
+          <h3>
+            <TimeComponent date="2016-07" />
+          </h3>
+          <p>
+            I wrote and edited a video essay about public health which came 3rd
+            in the
+            <a
+              href="https://populationeducation.org/resource/world-of-7-billion-website/"
+              >World of 7 Billion
+            </a>
+            video contest, winning a prize of 250$.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="illustration">
-      
-    </div>
-    
-  </article>
-  <article class="event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2023-01" />
-        </h3>
-        <p>
-          Joined the Institute of Art and Ideas as a Media Production Intern (video editor)
-        </p>
+      <div class="illustration">
+        <iframe
+          width="420"
+          height="315"
+          src="https://www.youtube.com/embed/4MR7GopzJ2s"
+        >
+        </iframe>
       </div>
-    </div>
-    <div class="illustration"></div>
-  </article>
-  <article class="illustrated event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2016-07" />
-        </h3>
-        <p>
-          I wrote and edited a video essay on deforestation and population
-          growth. It came 2nd in the
-          <a
-            href="https://populationeducation.org/resource/world-of-7-billion-website/"
-            >World of 7 Billion
-          </a>
-          video contest, winning a cash prize of 500$
-        </p>
-      </div>
-    </div>
-    <div class="illustration">
-      <iframe
-        width="420"
-        height="315"
-        src="https://www.youtube.com/embed/gJbzGhb-hzk"
-      >
-      </iframe>
-    </div>
-  </article>
-
-  <article class="illustrated event">
-    <div class="description">
-      <div class="text-wrapper">
-        <h3>
-          <TimeComponent date="2016-07" />
-
-        </h3>
-        <p>
-          I wrote and edited a video essay about public health which came 3rd in
-          the
-          <a
-            href="https://populationeducation.org/resource/world-of-7-billion-website/"
-            >World of 7 Billion
-          </a>
-          video contest, winning a prize of 250$.
-        </p>
-      </div>
-    </div>
-    <div class="illustration">
-      <iframe
-        width="420"
-        height="315"
-        src="https://www.youtube.com/embed/4MR7GopzJ2s"
-      >
-      </iframe>
-    </div>
-  </article>
+    </article>
+  </div>
 </Layout>
 <style>
   p {
@@ -209,21 +213,20 @@ import TimeComponent from "../components/TimeComponent.astro";
     }
   }
 
-
-
-  .event:nth-child(odd) {
+  /* coloring scheme */
+  .events-wrapper > article:nth-child(odd) {
     background-color: rgb(241, 242, 246);
   }
 
-  .event:nth-child(even) {
+  .events-wrapper > article:nth-child(even) {
     background-color: #fff;
   }
 
-  .event:nth-child(odd) .illustration {
+  .events-wrapper > article:nth-child(odd) .illustration {
     order: 0;
   }
 
-  .event:nth-child(odd) .description {
+  .events-wrapper > article:nth-child(odd) .description {
     order: 1;
   }
 </style>
