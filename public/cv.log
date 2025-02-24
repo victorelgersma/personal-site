@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  24 FEB 2025 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Homebrew) (preloaded format=pdflatex 2025.1.26)  24 FEB 2025 22:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/victor.elgersma41/dev/personal/site/public/cv/cv.tex
-(/Users/victor.elgersma41/dev/personal/site/public/cv/cv.tex
+**/Users/victor.elgersma41/dev/personal/site/public/cv.tex
+(/Users/victor.elgersma41/dev/personal/site/public/cv.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (/opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/tex/latex/base/article.cls
@@ -263,14 +263,14 @@ Package rerunfilecheck Info: File `cv.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  8870 strings out of 474116
- 140793 string characters out of 5732613
- 1940187 words of memory out of 5000000
+ 140784 string characters out of 5732613
+ 1939187 words of memory out of 5000000
  31163 multiletter control sequences out of 15000+600000
  560233 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,391b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,388b,434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20240312_3/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on cv.pdf (1 page, 80012 bytes).
+Output written on cv.pdf (1 page, 79713 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream
