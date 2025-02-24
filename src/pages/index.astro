@@ -63,52 +63,53 @@ import avatarImage from '../assets/img/image.jpeg'
         </svg>
       </a>
     </div>
+    <a href="/cv.pdf" class="text-center mt-10"> View my CV </a>
   </div>
+
+  <style>
+    /* reset */
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--main-text-color);
+      min-height: 100vh;
+    }
+
+    .avatar-image {
+      border-radius: 50%;
+      height: 160px;
+      aspect-ratio: 1 / 1;
+      border: 4px solid white;
+      background: #fff;
+      object-fit: cover;
+      filter: brightness(1.35);
+    }
+
+    .bio-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 450px;
+      min-width: 325px;
+      padding: 1rem 0.5rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 1rem 0;
+      color: #111;
+    }
+
+    .social a:hover {
+      opacity: 50%;
+      text-decoration: none;
+    }
+  </style>
 </Layout>
-
-<style>
-  /* reset */
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-text-color);
-    min-height: 100vh;
-  }
-
-  .avatar-image {
-    border-radius: 50%;
-    height: 160px;
-    aspect-ratio: 1 / 1;
-    border: 4px solid white;
-    background: #fff;
-    object-fit: cover;
-    filter: brightness(1.35);
-  }
-
-  .bio-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 450px;
-    min-width: 325px;
-    padding: 1rem 0.5rem;
-  }
-
-  p {
-    margin-top: 1rem;
-    line-height: 1.5rem;
-    text-align: center;
-  }
-
-  h1 {
-    margin: 1rem 0;
-    color: #111;
-  }
-
-  .social a:hover {
-    opacity: 50%;
-    text-decoration: none;
-  }
-</style>
